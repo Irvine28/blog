@@ -1,13 +1,7 @@
 import React,{Component} from 'react'
 
 class background extends Component {
-    
-    constructor(props) {
-    super(props);
-
-    }
-    
-    
+      
     render(){
         return(
             <div className='root-background'>
@@ -17,6 +11,5 @@ class background extends Component {
         )
     }
 }
-
 
 export default background

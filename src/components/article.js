@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {ProductConsumer} from '../context'
+import {ProductContext, ProductConsumer} from '../context'
 import {data} from '../data'
 import {Redirect} from 'react-router-dom';
 import Sharebutton from './UI/sharebutton.js'
@@ -14,20 +14,22 @@ class article extends Component {
     }
     
     componentDidMount(){
+        
         window.scrollTo(0,0)
+
+        let value = this.context;
+
+
+        if (value.articleContent.length===0)
+        {value.FindArticle(this.props.match.params.id);}   
+             
     }
-    
-    
     
     render(){
         return(
         <ProductConsumer>
             
-            
-                    {value=>{
-                        
-                        if (value.articleContent.length===0) 
-                         return <Redirect to='/articlelist' />
+                    {value=>{  
                         
                         return(
                             <div className="article-container">
@@ -40,7 +42,6 @@ class article extends Component {
                                     <Sharebutton/>
                                     
                                 </div>
-                                    
                                 
                                 <div className="article-body">                           
                                     {value.articleContent}
@@ -53,5 +54,6 @@ class article extends Component {
     }
 }
 
+article.contextType = ProductContext;
 
 export default article

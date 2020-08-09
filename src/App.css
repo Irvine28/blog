@@ -22,7 +22,8 @@ body
     
     --body-width : 60%;
     --font-size-heading: 2em;
-    --font-size-normal: 1.5em;
+    --font-size-heading2: 1.5em;
+    --font-size-normal: 1em;
     --font-size-button: 1em;
     }
 }
@@ -32,6 +33,7 @@ body
     {
     --body-width : 75%;
     --font-size-heading: 1.5em;
+    --font-size-heading2: 1.5em;
     --font-size-normal: 1em;
     --font-size-button: 1em;
     }
@@ -42,17 +44,19 @@ body
     {
     --hide-display: none;
     --body-width : 95%;
-    --font-size-heading: 1em;
-    --font-size-normal: 1em;
+    --font-size-heading: 1.5em;
+    --font-size-heading2: 1em;
+    --font-size-normal: 0.8em;
     --font-size-button: 0.7em;
     }
 }
 
 .root-background
 {
-    min-height: 100vh;
+    position: relative;
     background-image: url(images/article/201906_01/01.jpg);
     background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -78,7 +82,7 @@ a:hover
 
 .navbar
 {
-    font-size: ;
+    
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
     padding: 0.5rem;
@@ -90,7 +94,7 @@ a:hover
 {
     padding: 10px;
     text-decoration: none;
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-heading2);
     color: #ffffff !important;
     margin-left: 1em;
     margin-right: 1em;
@@ -183,7 +187,7 @@ a:hover
     border: none;
     padding: 1em;
     width: 20%;
-    font-size: 1em;
+    font-size: var(--font-size-button);
     text-align: center;
     margin: auto;
     margin-bottom: 1em;

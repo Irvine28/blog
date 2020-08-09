@@ -14,21 +14,32 @@ class sharebutton extends Component {
         }
     }
     
+    componentDidMount(){
+        
+        this.setState(()=>{
+            
+            return {
+                url: window.location.href
+            }
+            
+        })
+        
+    }
     
     render(){
         return(
                 <div className='share-button'>
-                    <FacebookShareButton url={this.state.url}>
+                    <FacebookShareButton url={window.location.href}>
                         <FacebookIcon round='true' size='2em' />
                     </FacebookShareButton>
                     <LineShareButton url='www.google.com'>
                         <LineIcon round='true' size='2em' />
                     </LineShareButton>
                     
-                    <WhatsappShareButton url='www.google.com'>
+                    <WhatsappShareButton url={window.location.href}>
                         <WhatsappIcon round='true' size='2em' />
                     </WhatsappShareButton>
-                    <TwitterShareButton url='www.google.com'>
+                    <TwitterShareButton url={window.location.href}>
                         <TwitterIcon round='true' size='2em' />
                     </TwitterShareButton>
                 </div>
