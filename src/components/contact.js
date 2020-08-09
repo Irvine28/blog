@@ -13,7 +13,7 @@ class contact extends Component {
     
     render(){
         return(
-            <p>This is contact</p>
+            <p>Any inquiry please email to abc@email.com</p>
 
         )
     }
